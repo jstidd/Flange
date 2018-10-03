@@ -96,7 +96,7 @@ def main():
     app = _get_app(unis, layout, args.size)
     
     from wsgiref.simple_server import make_server
-    server = make_server('0.0.0.0', port, app)
+    server = make_server('localhost', port, app)
     port = "" if port == 80 else port
     print("Getting topology from {}".format(unis))
     print("Listening on {}{}{}".format('http://localhost',":" if port else "", port))
